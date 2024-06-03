@@ -39,6 +39,7 @@ public class User {
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id", nullable = false, updatable = false),
             inverseJoinColumns = @JoinColumn(name = "role_id", nullable = false, updatable = false))
+
     private Set<Role> roles = new HashSet<Role>();
 
     public User(String firstName, String lastName, byte age, String email, String password,
